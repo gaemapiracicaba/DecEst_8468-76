@@ -4,4 +4,4 @@ Por meio do [Decreto Estadual 8.468](https://www.cetesb.sp.gov.br/Institucional/
 
 ----
 
-O presente repositório objetiva disponibilizar os parâmetros de qualidade em formato adequado para utilização em análises computacionais.
+O presente repositório objetiva disponibilizar os parâmetros de qualidade em formato tabular, adequado para utilização em análises computacionais.
