@@ -57,7 +57,7 @@ else:
 
 O resultado será um dicionário contendo as seguintes informações:
 
-```json
+```python
 {'padrao_qualidade': 'Classe 2',
  'parametro_descricao': 'Oxigênio Dissolvido',
  'parametro_sigla': 'OD',
