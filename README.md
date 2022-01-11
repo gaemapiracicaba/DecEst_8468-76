@@ -33,6 +33,7 @@ O presente repositório objetiva disponibilizar os parâmetros de qualidade em f
 Para obter as informações da tabela, basta ajustar o "padrao_qualidade" e o "parametro_descricao".
 
 ```python
+import pprint
 import pandas as pd
 
 # Read Data
@@ -48,7 +49,7 @@ df = df.loc[
 # Check and Get Results
 if len(df) == 1:
     data = df.to_dict(orient='records')[0]
-    display(data)
+    pprint.pprint(data, width=150, sort_dicts=False)
 else:
     print('Erro')
 ```
@@ -72,4 +73,4 @@ O resultado será um dicionário contendo as seguintes informações:
 
 ### *ToDo*
 
-1. Tabular parâmetros de lançamento (Art. 18 e 19)
+1. Tabular Parâmetros de Lançamento (Art. 18 e 19)
