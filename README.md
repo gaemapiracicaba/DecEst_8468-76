@@ -4,6 +4,8 @@
 
 Por meio do [Decreto Estadual 8.468](https://www.cetesb.sp.gov.br/Institucional/documentos/Dec8468.pdf), de 08.09.1976, que *"aprova o Regulamento da Lei n° 997, de 31 de maio de 1976, que dispõe sobre a prevenção e o controle da poluição do meio ambiente"*, são mencionados, dentre outros assuntos, os padrões de qualidade de águas interiores e padrões de lançamento de efluentes.
 
+A lei sofreu diversas alterações, sendo a última pelo Decreto Estadual 54.487/09.
+
 <br>
 
 **Padrão de Qualidade**
@@ -12,6 +14,8 @@ Por meio do [Decreto Estadual 8.468](https://www.cetesb.sp.gov.br/Institucional/
 - Artigo 11: Cursos d'água Classe 2
 - Artigo 12: Cursos d'água Classe 3
 - Artigo 13: Cursos d'água Classe 4
+
+<br>
 
 **Padrão de Lançamento**
 
