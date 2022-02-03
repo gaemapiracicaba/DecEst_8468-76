@@ -9,7 +9,7 @@ for line in open('requirements.txt'):
     if not li.startswith('#'):
         requirements.append(line.rstrip())
 
-VERSION = (1, 0, 0)  # (1, 0, 7, 'dev0')
+VERSION = (1, 0, 1)  # (1, 0, 7, 'dev0')
 __version__ = '.'.join(map(str, VERSION))
 
 setup(
@@ -20,7 +20,7 @@ setup(
     description='O presente repositório objetiva disponibilizar os parâmetros de qualidade em formato tabular, adequado para utilização em análises computacionais.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/open-dsa/gerador_endereco',
+    url='https://github.com/gaemapiracicaba/norma_dec_8468-76',
     python_requires='>=3',
     package_dir={'': 'src'},  # Our packages live under src but src is not a package itself
     packages=find_packages('src', exclude=['tests']),

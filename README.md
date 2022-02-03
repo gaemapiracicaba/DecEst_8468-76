@@ -2,7 +2,7 @@
 
 <br>
 
-Por meio do [Decreto Estadual 8.468](https://www.cetesb.sp.gov.br/Institucional/documentos/Dec8468.pdf), de 08.09.1976, que *"aprova o Regulamento da Lei n° 997, de 31 de maio de 1976, que dispõe sobre a prevenção e o controle da poluição do meio ambiente"*, são mencionados, dentre outros assuntos, os padrões de qualidade de águas interiores e padrões de lançamento de efluentes.
+Por meio do [Decreto Estadual 8.468](https://www.cetesb.sp.gov.br/Institucional/documentos/Dec8468.pdf), de 08.09.1976, que *"aprova o Regulamento da Lei n° 997, de 31 de maio de 1976, que dispõe sobre a prevenção e o controle da poluição do meio ambiente"*, são aptresentados, dentre outros assuntos, os padrões de qualidade de águas interiores e padrões de lançamento de efluentes.
 
 A lei sofreu diversas alterações, sendo a última pelo Decreto Estadual 54.487/09.
 
@@ -28,34 +28,47 @@ A lei sofreu diversas alterações, sendo a última pelo Decreto Estadual 54.487
 
 ### Objetivo
 
+<br>
+
 O presente repositório objetiva disponibilizar os parâmetros de qualidade em formato tabular, adequado para utilização em análises computacionais.
+
+<br>
+
+----
+
+### Como Instalar?
+
+<br>
+
+```python
+pip install decreto-estadual-8468 --upgrade
+```
+
+<br>
 
 ----
 
 ### Como usar?
 
-Para obter as informações da tabela, basta ajustar o "padrao_qualidade" e o "parametro_descricao".
+<br>
+
+Para obter as informações da tabela, basta ajustar o *classe* e o *parametro*.
 
 ```python
-import pprint
-import pandas as pd
+from decreto_estadual_8468 import *
 
-# Read Data
-url = 'https://raw.githubusercontent.com/gaemapiracicaba/norma_dec_8468-76/main/data/tab_DecEst8468.xlsx'
-df = pd.read_excel(url, index_col=0)
+# Get Table
+df_8468, list_classes = get_8468_parameters()
 
-# Filter Data
-df = df.loc[
-    (df['padrao_qualidade'] == 'Classe 2') & 
-    (df['parametro_descricao'] == 'Oxigênio Dissolvido'),
-]
+# Filter Data by "Classe"
+df_8468, list_parametros = filter_by_classe(df_8468, classe='Classe 2')
 
-# Check and Get Results
-if len(df) == 1:
-    data = df.to_dict(orient='records')[0]
-    pprint.pprint(data, width=150, sort_dicts=False)
-else:
-    print('Erro')
+# Filter Data by "Parâmetros"
+dict_8468 = filter_by_parameters(df_8468, parametro='Oxigênio Dissolvido')
+print(dict_8468)
+
+# Set Tipo
+set_type_desconformidade(dict_8468)
 ```
 
 <br>
@@ -73,8 +86,12 @@ O resultado será um dicionário contendo as seguintes informações:
  'norma_texto': 'Oxigênio Dissolvido (OD), em qualquer amostra, não inferior a 5 mg/l (cinco miligramas por litro)'}
 ```
 
+Caso queira testar, segue um [Google Colab](https://colab.research.google.com/drive/1QZjsB6i8w_BAyMm3z4CB0_liSYOFQpdy).
+
+<br>
+
 ----
 
 ### *ToDo*
 
-1. Tabular Parâmetros de Lançamento (Art. 18 e 19)
+1. <strike>Tabular Parâmetros de Lançamento (Art. 18 e 19)</strike>
