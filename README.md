@@ -30,7 +30,7 @@ A lei sofreu diversas alterações, sendo a última pelo Decreto Estadual 54.487
 
 <br>
 
-O presente repositório objetiva disponibilizar os parâmetros de qualidade em formato tabular, adequado para utilização em análises computacionais.
+O projeto objetiva disponibilizar os parâmetros de qualidade em formato adequado para utilização em análises computacionais.
 
 <br>
 
