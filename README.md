@@ -76,7 +76,8 @@ set_type_desconformidade(dict_8468)
 O resultado será um dicionário contendo as seguintes informações:
 
 ```python
-{'padrao_qualidade': 'Classe 2',
+{'tipo_padrao': 'qualidade',
+ 'padrao_qualidade': 'Classe 2',
  'parametro_descricao': 'Oxigênio Dissolvido',
  'parametro_sigla': 'OD',
  'valor_minimo_permitido': 5.0,
@@ -84,7 +85,9 @@ O resultado será um dicionário contendo as seguintes informações:
  'unidade': 'mg/l ',
  'norma_referencia': 'Inciso V, Art. 11',
  'norma_texto': 'Oxigênio Dissolvido (OD), em qualquer amostra, não inferior a 5 mg/l (cinco miligramas por litro)'}
-```
+ ```
+
+<br>
 
 Caso queira testar, segue um [Google Colab](https://colab.research.google.com/drive/1QZjsB6i8w_BAyMm3z4CB0_liSYOFQpdy).
 
