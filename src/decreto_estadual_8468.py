@@ -46,7 +46,6 @@ def filter_by_parameters(df_8468, parametro):
     # Check and Get Results
     if len(df_8468) == 1:
         dict_8468 = df_8468.to_dict(orient='records')[0]
-        #pprint.pprint(dict_8468, width=150, sort_dicts=False)
         return dict_8468
     else:
         print('Erro')

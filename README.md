@@ -89,7 +89,7 @@ O resultado será um dicionário contendo as seguintes informações:
 
 <br>
 
-Caso queira testar, segue um [Google Colab](https://colab.research.google.com/drive/1QZjsB6i8w_BAyMm3z4CB0_liSYOFQpdy).
+Caso queira testar, segue um [*Google Colab*](https://colab.research.google.com/drive/1QZjsB6i8w_BAyMm3z4CB0_liSYOFQpdy).
 
 <br>
 
