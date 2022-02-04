@@ -73,7 +73,8 @@ print(dict_8468)
 O resultado será um dicionário contendo as seguintes informações:
 
 ```python
-{'tipo_padrao': 'qualidade',
+{
+ 'tipo_padrao': 'qualidade',
  'padrao_qualidade': 'Classe 2',
  'parametro_descricao': 'Oxigênio Dissolvido',
  'parametro_sigla': 'OD',
@@ -81,7 +82,8 @@ O resultado será um dicionário contendo as seguintes informações:
  'valor_maximo_permitido': nan,
  'unidade': 'mg/l ',
  'norma_referencia': 'Inciso V, Art. 11',
- 'norma_texto': 'Oxigênio Dissolvido (OD), em qualquer amostra, não inferior a 5 mg/l (cinco miligramas por litro)'}
+ 'norma_texto': 'Oxigênio Dissolvido (OD), em qualquer amostra, não inferior a 5 mg/l (cinco miligramas por litro)'
+}
  ```
 
 <br>

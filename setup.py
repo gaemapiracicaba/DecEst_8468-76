@@ -33,15 +33,14 @@ setup(
     # Qual python? e packages?
     python_requires='>=3',
     install_requires=requirements,
-    
+
     # Quando são diversos módulos...
-    #packages=find_packages('src', exclude=['test']),
-    
+    # packages=find_packages('src', exclude=['test']),
+
     # Apenas um módulo...
     package_dir={'': 'src'},  # Our packages live under src but src is not a package itself
-    py_modules = ['decreto_estadual_8468'],     # Quando trata-se apenas de um módulo
-    
+    py_modules=['decreto_estadual_8468'],  # Quando se trata apenas de um módulo
+
     # Dados
-    package_data={'': ['data/tab_dec_8468.xlsx']},
-    
+    package_data={'data': ['data/tab_dec_8468.xlsx']},
 )
