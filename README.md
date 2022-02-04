@@ -133,5 +133,5 @@ Caso queira testar, segue um [*Google Colab*](https://colab.research.google.com/
 1. <strike>Tabular Parâmetros de Lançamento (Art. 18 e 19)</strike>
 2. <strike>Desenvolver função que teste um dado valor de um parâmetro, para uma classe de rio. Faz-se isso considerando o resultado de *set_type_desconformidade(dict_8468)*</strike>
 3. <strike>Usar o resultado em OrderedDict</strike>
-4. Desenvolver funções para usar os padrões de lançamento!
-5. Remover *prints* do *evaluate_result*.
+4. <strike>Remover *prints* do *evaluate_result*.</strike>
+5. Desenvolver funções para usar os padrões de lançamento!
