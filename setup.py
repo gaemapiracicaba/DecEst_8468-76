@@ -35,7 +35,7 @@ setup(
     install_requires=requirements,
 
     # Entry
-    package_dir={'': ''},  # Our packages live under src but src is not a package itself
+    package_dir={'': 'src'},  # Our packages live under src but src is not a package itself
 
     # Quando são diversos módulos...
     packages=find_packages('src', exclude=['test']),
@@ -45,5 +45,5 @@ setup(
 
     # Dados
     include_package_data=True,
-    package_data={'src': ['data/tab_dec_8468.xlsx']},
+    package_data={'': ['data/tab_dec_8468.xlsx']},
 )
