@@ -55,16 +55,16 @@ pip3 install decreto-estadual-8468 --upgrade
 Para obter as informações da tabela, basta ajustar os parâmetros *classe* e o *parametro*.
 
 ```python
-from decreto_estadual_8468 import *
+from normas import decreto_estadual_8468
 
 # Get Table
-df_8468, list_classes = get_8468_parameters()
+df_8468, list_classes = decreto_estadual_8468.get_parameters()
 
 # Filter Data by "Classe"
-df_8468, list_parametros = filter_by_classe(df_8468, classe='Classe 2')
+df_8468, list_parametros = decreto_estadual_8468.filter_by_classe(df_8468, classe='Classe 2')
 
 # Filter Data by "Parâmetros"
-dict_8468 = filter_by_parameters(df_8468, parametro='Oxigênio Dissolvido')
+dict_8468 = decreto_estadual_8468.filter_by_parameters(df_8468, parametro='Oxigênio Dissolvido')
 print(dict_8468)
 ```
 
@@ -92,7 +92,7 @@ Há mais uma função escrita para melhor compreender como fazer a avaliação d
 
 ```python
 # Set Tipo
-set_type_desconformidade(dict_8468)
+decreto_estadual_8468.set_type_desconformidade(dict_8468)
 ```
 
 <br>
@@ -116,3 +116,5 @@ Caso queira testar, segue um [*Google Colab*](https://colab.research.google.com/
 
 1. <strike>Tabular Parâmetros de Lançamento (Art. 18 e 19)</strike>
 2. Desenvolver função que teste um dado valor de um parâmetro, para uma classe de rio. Faz-se isso considerando o resultado de *set_type_desconformidade(dict_8468)*
+3. Usar o resultado em OrderedDict
+4. Pensar nas funções para usar os padrões de lançamento
