@@ -34,12 +34,14 @@ setup(
     python_requires='>=3',
     install_requires=requirements,
 
+    # ddd
+    package_dir={'': 'src'},  # Our packages live under src but src is not a package itself
+
     # Quando são diversos módulos...
-    # packages=find_packages('src', exclude=['test']),
+    packages=find_packages('src', exclude=['test']),
 
     # Apenas um módulo...
-    package_dir={'': 'src'},  # Our packages live under src but src is not a package itself
-    py_modules=['decreto_estadual_8468'],  # Quando se trata apenas de um módulo
+    #py_modules=['decreto_estadual_8468'],  # Quando se trata apenas de um módulo
 
     # Dados
     include_package_data=True,

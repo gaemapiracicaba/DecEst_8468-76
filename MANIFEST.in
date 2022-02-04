@@ -12,7 +12,7 @@ prune test # Remove all files under directories test
 
 # Excluí
 exclude data/tab_Pa*
-exclude src/run.py
+exclude */run.py
 
 # Excluí
 global-exclude __pycache__
