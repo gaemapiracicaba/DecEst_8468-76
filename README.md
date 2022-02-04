@@ -2,7 +2,7 @@
 
 <br>
 
-Por meio do [Decreto Estadual 8.468](https://www.cetesb.sp.gov.br/Institucional/documentos/Dec8468.pdf), de 08.09.1976, que *"aprova o Regulamento da Lei n° 997, de 31 de maio de 1976, que dispõe sobre a prevenção e o controle da poluição do meio ambiente"*, são aptresentados, dentre outros assuntos, os padrões de qualidade de águas interiores e padrões de lançamento de efluentes.
+Por meio do [Decreto Estadual 8.468](https://www.cetesb.sp.gov.br/Institucional/documentos/Dec8468.pdf), de 08.09.1976, que *"aprova o Regulamento da Lei n° 997, de 31 de maio de 1976, que dispõe sobre a prevenção e o controle da poluição do meio ambiente"*, são apresentados os padrões de qualidade de águas interiores e padrões de lançamento de efluentes.
 
 A lei sofreu diversas alterações, sendo a última pelo Decreto Estadual 54.487/09.
 
@@ -70,7 +70,7 @@ print(dict_8468)
 
 <br>
 
-O resultado será um dicionário contendo as seguintes informações:
+O resultado será um dicionário (*OrderedDict*) contendo as seguintes informações:
 
 ```python
 {
@@ -88,7 +88,7 @@ O resultado será um dicionário contendo as seguintes informações:
 
 <br>
 
-Há mais uma função escrita para melhor compreender como fazer a avaliação do parâmetro, visto que há alguns que quanto menos temos, pior é enquanto outros é o inverso e outros ainda f
+Há mais uma função escrita para melhor compreender como fazer a avaliação do parâmetro. Isso pois existem parâmetros que busca-se minimizar a quantidade presente no ambiente (ex. poluentes), enquanto para outros parâmetros busca-se maximizar a quantidade presente no ambiente (ex. oxigênio dissolvido).
 
 ```python
 # Set Tipo
@@ -106,6 +106,22 @@ O resultado é uma *string*, que pode ser de quatro tipos diferentes:
 
 <br>
 
+Por fim, é possível avaliar um valor, confrontando o valor com o padrão de qualidade.
+O resultado será uma *string*: **conforme** ou **desconforme**!
+
+```python
+# Avaliar
+valor=10
+evaluate_result(valor, dict_8468)
+```
+<br>
+
+----
+
+### Testes
+
+<br>
+
 Caso queira testar, segue um [*Google Colab*](https://colab.research.google.com/drive/1QZjsB6i8w_BAyMm3z4CB0_liSYOFQpdy?usp=sharing).
 
 <br>
@@ -115,6 +131,7 @@ Caso queira testar, segue um [*Google Colab*](https://colab.research.google.com/
 ### *TODO*
 
 1. <strike>Tabular Parâmetros de Lançamento (Art. 18 e 19)</strike>
-2. Desenvolver função que teste um dado valor de um parâmetro, para uma classe de rio. Faz-se isso considerando o resultado de *set_type_desconformidade(dict_8468)*
-3. Usar o resultado em OrderedDict
-4. Pensar nas funções para usar os padrões de lançamento
+2. <strike>Desenvolver função que teste um dado valor de um parâmetro, para uma classe de rio. Faz-se isso considerando o resultado de *set_type_desconformidade(dict_8468)*</strike>
+3. <strike>Usar o resultado em OrderedDict</strike>
+4. Desenvolver funções para usar os padrões de lançamento!
+5. Remover *prints* do *evaluate_result*.
