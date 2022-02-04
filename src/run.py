@@ -4,7 +4,12 @@
 import os
 print(os.getcwd())
 
+
+print(this_filename)
+
 from decreto_estadual_8468 import *
+
+
 
 
 # Get Table
