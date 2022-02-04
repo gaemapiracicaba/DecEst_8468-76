@@ -64,23 +64,23 @@ def filter_by_parameters(df_8468, parametro):
 
 def set_type_desconformidade(dict_8468):
     if pd.isnull(dict_8468['valor_minimo_permitido']) & pd.notnull(dict_8468['valor_maximo_permitido']):
-        print('Parâmetro só tem "valor máximo". Caso o valor medido esteja acima, é amostra desconforme!')
+        #print('Parâmetro só tem "valor máximo". Caso o valor medido esteja acima, é amostra desconforme!')
         tipo_8486 = 'acima>desconforme'
 
     elif pd.notnull(dict_8468['valor_minimo_permitido']) & pd.isnull(dict_8468['valor_maximo_permitido']):
-        print('Parâmetro só tem "valor mínimo". Caso o valor medido esteja abaixo, é amostra desconforme!')
+        #print('Parâmetro só tem "valor mínimo". Caso o valor medido esteja abaixo, é amostra desconforme!')
         tipo_8486 = 'abaixo>desconforme'
 
     elif pd.notnull(dict_8468['valor_minimo_permitido']) & pd.notnull(dict_8468['valor_maximo_permitido']):
-        print('Parâmetro tem "valor mínimo" e "valor máximo". Caso o valor medido acima ou abaixo, é amostra desconforme!')
+        #print('Parâmetro tem "valor mínimo" e "valor máximo". Caso o valor medido acima ou abaixo, é amostra desconforme!')
         tipo_8486 = 'abaixo_acima>desconforme'
 
     elif pd.isnull(dict_8468['valor_minimo_permitido']) & pd.isnull(dict_8468['valor_maximo_permitido']):
-        print('Erro!')
+        #print('Erro!')
         tipo_8486 = 'erro'
     else:
         print('Erro!')
-        tipo_8486 = 'erro'
+        #tipo_8486 = 'erro'
 
     return tipo_8486
 
