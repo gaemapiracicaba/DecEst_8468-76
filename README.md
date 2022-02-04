@@ -52,7 +52,7 @@ pip3 install decreto-estadual-8468 --upgrade
 
 <br>
 
-Para obter as informações da tabela, basta ajustar o *classe* e o *parametro*.
+Para obter as informações da tabela, basta ajustar os parâmetros *classe* e o *parametro*.
 
 ```python
 from decreto_estadual_8468 import *
@@ -83,10 +83,10 @@ O resultado será um dicionário contendo as seguintes informações:
  'norma_referencia': 'Inciso V, Art. 11',
  'norma_texto': 'Oxigênio Dissolvido (OD), em qualquer amostra, não inferior a 5 mg/l (cinco miligramas por litro)'}
  ```
+
 <br>
 
 Há mais uma função escrita para melhor compreender como fazer a avaliação do parâmetro, visto que há alguns que quanto menos temos, pior é enquanto outros é o inverso e outros ainda f
-
 
 ```python
 # Set Tipo
