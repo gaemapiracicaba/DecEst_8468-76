@@ -3,6 +3,7 @@
 
 import os
 import pprint
+import pkg_resources
 import pandas as pd
 
 
@@ -17,7 +18,8 @@ def get_8468_parameters():
     # Read Data
     df_8468 = pd.read_excel(
         #io='https://raw.githubusercontent.com/gaemapiracicaba/norma_dec_8468-76/main/data/tab_dec_8468.xlsx',
-        io=os.path.join(os.path.dirname(__file__), 'data', 'tab_dec_8468.xlsx'),
+        #io=os.path.join(os.path.dirname(__file__), 'data', 'tab_dec_8468.xlsx'),
+        io=pkg_resources.resource_filename(__name__, 'data/tab_dec_8468.xlsx'),
         sheet_name='dec_8468',
         index_col=0
     )
