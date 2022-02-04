@@ -11,11 +11,12 @@ prune test # Remove all files under directories test
 #recursive-include YourPackage/data/*.csv
 
 # Excluí
-exclude data/tab_Pa*
+exclude src/normas/data/tab_Pa*
+exclude */*/run.py
 exclude */run.py
 
 # Excluí
 global-exclude __pycache__
 global-exclude *.py[cod] # The square brackets are for matching any one of the characters, so it matches .pyc, .pyo and .pyd
 global-exclude *.ipynb_checkpoints/
-global-exclude *.egg-info/
+

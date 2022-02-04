@@ -3,28 +3,13 @@
 
 import os
 import pprint
-import pkg_resources
 import pandas as pd
 
 
-def print_michel():
-    print(__name__)
-    print(os.path.dirname(__file__))
-    print(__file__)
-    return print('Caralha de pasta data')
-
-print_michel()
-
-
-def get_8468_parameters():
+def get_parameters():
     # Read Data
-    #rrno 2]   __name__    No such file or directory: '/usr/local/lib/python3.7/dist-packages/data/tab_dec_8468.xlsx'
-    #this_dir, this_filename = os.path.split(__file__)
-    #print(this_dir)
     df_8468 = pd.read_excel(
-        #io='https://raw.githubusercontent.com/gaemapiracicaba/norma_dec_8468-76/main/data/tab_dec_8468.xlsx',
         io=os.path.join(os.path.dirname(__file__), 'data', 'tab_dec_8468.xlsx'),
-        #io=pkg_resources.resource_filename(this_dir, 'data/tab_dec_8468.xlsx'),
         sheet_name='dec_8468',
         index_col=0
     )
