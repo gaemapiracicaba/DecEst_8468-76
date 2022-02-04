@@ -9,7 +9,7 @@ for line in open('requirements.txt'):
     if not li.startswith('#'):
         requirements.append(line.rstrip())
 
-VERSION = (1, 0, 10)  # (1, 0, 7, 'dev0')
+VERSION = (1, 0, 11)  # (1, 0, 7, 'dev0')
 __version__ = '.'.join(map(str, VERSION))
 
 setup(
@@ -42,5 +42,6 @@ setup(
     py_modules=['decreto_estadual_8468'],  # Quando se trata apenas de um módulo
 
     # Dados
-    package_data={'data': ['data/tab_dec_8468.xlsx']},
+    include_package_data=True,
+    package_data={'': ['data/tab_dec_8468.xlsx']},
 )

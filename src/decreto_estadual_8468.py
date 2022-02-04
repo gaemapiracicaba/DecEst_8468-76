@@ -16,11 +16,11 @@ def get_8468_parameters():
     # Read Data
     df_8468 = pd.read_excel(
         #io='https://raw.githubusercontent.com/gaemapiracicaba/norma_dec_8468-76/main/data/tab_dec_8468.xlsx',
-        io=os.path.join('data', 'tab_dec_8468.xlsx'),
+        io=os.path.join(__name__, 'data', 'tab_dec_8468.xlsx'),
         sheet_name='dec_8468',
         index_col=0
     )
-    
+
     # Filter only quality
     df_8468 = df_8468.loc[(df_8468['tipo_padrao'] == 'qualidade')]
     #print(df_8468.head())
@@ -37,7 +37,7 @@ def get_8468_parameters():
 def filter_by_classe(df_8468, classe):
     # Filter dataframe by Classe
     df_8468 = df_8468.loc[(df_8468['padrao_qualidade'] == classe)]
-    
+
     # Parâmetros
     list_parametros = list(set(df_8468['parametro_descricao']))
     list_parametros = [x for x in list_parametros if pd.notnull(x)]
@@ -49,7 +49,7 @@ def filter_by_classe(df_8468, classe):
 def filter_by_parameters(df_8468, parametro):
     # Filter dataframe by Parametro
     df_8468 = df_8468.loc[(df_8468['parametro_descricao'] == parametro)]
-    
+
     # Check and Get Results
     if len(df_8468) == 1:
         dict_8468 = df_8468.to_dict(orient='records')[0]
