@@ -9,7 +9,7 @@ for line in open('requirements.txt'):
     if not li.startswith('#'):
         requirements.append(line.rstrip())
 
-VERSION = (1, 0, 19)  # (1, 0, 7, 'dev0')
+VERSION = (1, 0, 21)  # (1, 0, 7, 'dev0')
 __version__ = '.'.join(map(str, VERSION))
 
 setup(
@@ -45,5 +45,5 @@ setup(
 
     # Dados
     include_package_data=True,
-    package_data={'': ['data/tab_dec_8468.xlsx']},
+    package_data={'src': ['data/tab_dec_8468.xlsx']},
 )
