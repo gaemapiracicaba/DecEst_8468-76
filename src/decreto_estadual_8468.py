@@ -10,7 +10,6 @@ def print_michel():
     print(__name__)
     return print('Caralha de pasta data')
 
-
 print_michel()
 
 
@@ -18,7 +17,7 @@ def get_8468_parameters():
     # Read Data
     df_8468 = pd.read_excel(
         #io='https://raw.githubusercontent.com/gaemapiracicaba/norma_dec_8468-76/main/data/tab_dec_8468.xlsx',
-        io=os.path.join('data', 'tab_dec_8468.xlsx'),
+        io=os.path.join(os.path.dirname(__file__), 'data', 'tab_dec_8468.xlsx'),
         sheet_name='dec_8468',
         index_col=0
     )
