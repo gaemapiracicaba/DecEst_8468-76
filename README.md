@@ -40,8 +40,8 @@ O projeto objetiva disponibilizar os parâmetros de qualidade em formato adequad
 
 <br>
 
-```python
-pip install decreto-estadual-8468 --upgrade
+```bash
+pip3 install decreto-estadual-8468 --upgrade
 ```
 
 <br>
@@ -66,9 +66,6 @@ df_8468, list_parametros = filter_by_classe(df_8468, classe='Classe 2')
 # Filter Data by "Parâmetros"
 dict_8468 = filter_by_parameters(df_8468, parametro='Oxigênio Dissolvido')
 print(dict_8468)
-
-# Set Tipo
-set_type_desconformidade(dict_8468)
 ```
 
 <br>
@@ -86,15 +83,34 @@ O resultado será um dicionário contendo as seguintes informações:
  'norma_referencia': 'Inciso V, Art. 11',
  'norma_texto': 'Oxigênio Dissolvido (OD), em qualquer amostra, não inferior a 5 mg/l (cinco miligramas por litro)'}
  ```
+<br>
+
+Há mais uma função escrita para melhor compreender como fazer a avaliação do parâmetro, visto que há alguns que quanto menos temos, pior é enquanto outros é o inverso e outros ainda f
+
+
+```python
+# Set Tipo
+set_type_desconformidade(dict_8468)
+```
 
 <br>
 
-Caso queira testar, segue um [*Google Colab*](https://colab.research.google.com/drive/1QZjsB6i8w_BAyMm3z4CB0_liSYOFQpdy).
+O resultado é uma *string*, que pode ser de quatro tipos diferentes:
+
+- **acima>desconforme**, só há desconformidade se estiver acima do *valor_maximo_permitido* (ex.: chumbo, fósforo, DBO. Quanto menos, melhor);
+- **abaixo>desconforme**, só há desconformidade se estiver abaixo do *valor_minimo_permitido* (ex.: oxigênio dissolvido. Quanto mais, melhor);
+- **abaixo_acima>desconforme**, qualquer coisa abaixo ou acima dos *valor_minimo_permitido* e *valor_maximo_permitido*, respectivamente, gera desconformidade (ex.: pH, de é adequado estar entre 6 e 9);
+- **erro**, caso nenhuma das situações anteriores ocorrer (improvável!). Seria erro na tabulação ou no código.
+
+<br>
+
+Caso queira testar, segue um [*Google Colab*](https://colab.research.google.com/drive/1QZjsB6i8w_BAyMm3z4CB0_liSYOFQpdy?usp=sharing).
 
 <br>
 
 ----
 
-### *ToDo*
+### *TODO*
 
 1. <strike>Tabular Parâmetros de Lançamento (Art. 18 e 19)</strike>
+2. Desenvolver função que teste um dado valor de um parâmetro, para uma classe de rio. Faz-se isso considerando o resultado de *set_type_desconformidade(dict_8468)*

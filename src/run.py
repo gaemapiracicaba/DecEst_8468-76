@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+import os
+print(os.getcwd())
+
 from decreto_estadual_8468 import *
+
 
 # Get Table
 df_8468, list_classes = get_8468_parameters()
