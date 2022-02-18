@@ -85,7 +85,7 @@ def set_type_desconformidade(dict_8468):
     return tipo_8486
 
 
-def evaluate_result(valor, dict_8468):
+def evaluate_result(valor, dict_8468=dict_8468):
     # Get type
     tipo_8486 = set_type_desconformidade(dict_8468)
 
@@ -107,9 +107,6 @@ def evaluate_result(valor, dict_8468):
             result_8468 = 'conforme'
         else:
             result_8468 = 'desconforme'
-
-    elif tipo_8486 == 'erro':
-        result_8468 = 'erro'
 
     else:
         result_8468 = 'erro'
