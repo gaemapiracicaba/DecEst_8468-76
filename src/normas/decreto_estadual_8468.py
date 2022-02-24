@@ -16,8 +16,8 @@ def get_parameters():
             index_col=0
         )
     except Exception as e:
-        print(e, '\n')
-        print('Read table from GitHub')
+        #print(e, '\n')
+        #print('Read table from GitHub')
         df_8468 = pd.read_excel(
             io='https://raw.githubusercontent.com/gaemapiracicaba/norma_dec_8468-76/main/src/normas/data/tab_dec_8468.xlsx',
             sheet_name='dec_8468',
@@ -31,8 +31,7 @@ def get_parameters():
     # Classes
     list_classes = list(set(df_8468['padrao_qualidade']))
     list_classes = [x for x in list_classes if pd.notnull(x)]
-    list_classes.sort()
-    pprint.pprint(list_classes)
+    list_classes.sort()    
 
     return df_8468, list_classes
 
@@ -44,8 +43,7 @@ def filter_by_classe(df_8468, classe):
     # Parâmetros
     list_parametros = list(set(df_8468['parametro_descricao']))
     list_parametros = [x for x in list_parametros if pd.notnull(x)]
-    list_parametros.sort()
-    pprint.pprint(list_parametros)
+    list_parametros.sort()    
     return df_8468, list_parametros
 
 
